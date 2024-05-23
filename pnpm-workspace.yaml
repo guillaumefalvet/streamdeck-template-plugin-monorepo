@@ -1,4 +1,4 @@
 packages:
   - plugin
-  - pi
+  - property-inspector
   - shared
