@@ -1,0 +1,42 @@
+name: Ubuntu Build
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20
+
+    - uses: pnpm/action-setup@v2
+      name: Install pnpm
+      id: pnpm-install
+      with:
+        version: 8
+        run_install: true
+
+    - name: Install npm dependencies and build
+      run: pnpm install && pnpm build
+
+    - name: Create dist folder
+      run: mkdir -p dist
+
+    - name: Validate & Package the plugin
+      run: pnpm packaging
+
+    - name: Upload Release Folder
+      uses: actions/upload-artifact@v3
+      with:
+        name: release
+        path: dist

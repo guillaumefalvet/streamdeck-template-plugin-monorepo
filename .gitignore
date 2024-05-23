@@ -1,0 +1,12 @@
+# Node.js
+node_modules/
+dist/
+.DS_Store
+
+# Stream Deck files
+*.sdPlugin/bin
+*.sdPlugin/logs
+
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
