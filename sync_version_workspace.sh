@@ -136,7 +136,8 @@ fi
 manifest_file="com.falvet-guillaume.template-plugin-ws.sdPlugin/manifest.json"
 if [ -f "$manifest_file" ]; then
     echo -e "${blue_color}Updating $manifest_file to version $version...${end_color}"
-    jq --arg v "$version" '.Version = $v' "$manifest_file" > "$manifest_file.tmp" && mv "$manifest_file.tmp" "$manifest_file"
+    updated_version="$version.0"
+    jq --arg v "$updated_version" '.Version = $v' "$manifest_file" > "$manifest_file.tmp" && mv "$manifest_file.tmp" "$manifest_file"
 else
     echo -e "${yellow_color}No manifest.json found in com.falvet-guillaume.template-plugin-ws.sdPlugin folder.${end_color}"
 fi
