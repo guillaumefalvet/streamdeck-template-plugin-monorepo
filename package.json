@@ -3,7 +3,7 @@
   "author": "Falvet Guillaume",
   "license": "MIT",
   "private": false,
-  "version": "3.0.0",
+  "version": "1.0.0",
   "scripts": {
     "clean": "rimraf com.falvet-guillaume.template-plugin-ws.sdPlugin/bin",
     "clean:package": "rimraf dist",
@@ -11,7 +11,7 @@
     "build:plugin": "npm run build --prefix plugin",
     "build": "npm run clean && npm run build:pi && npm run build:plugin",
     "validate": "npx sd validate ./com.falvet-guillaume.template-plugin-ws.sdPlugin",
-    "packaging": "npm run clean:dist && npm run validate && sd pack ./com.falvet-guillaume.template-plugin-ws.sdPlugin -o ./dist",
+    "packaging": "npm run clean:package && npm run validate && sd pack ./com.falvet-guillaume.template-plugin-ws.sdPlugin -o ./dist",
     "hot-reload:mac": "bash rebuild-mac.sh",
     "ws:logger": "ts-node ws-logger.js",
     "version:sync": "bash sync_version_workspace.sh --sync",
