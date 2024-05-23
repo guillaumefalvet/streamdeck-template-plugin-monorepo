@@ -1,0 +1,30 @@
+{
+  "name": "plugin",
+  "author": "Falvet Guillaume",
+  "license": "MIT",
+  "private": false,
+  "version": "3.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "build:watch": "rollup -c -w --watch.onEnd=\"streamdeck restart com.falvet-guillaume.template-plugin-ws\""
+  },
+  "devDependencies": {
+    "@rollup/plugin-alias": "^5.1.0",
+    "@rollup/plugin-commonjs": "^25.0.5",
+    "@rollup/plugin-node-resolve": "^15.2.2",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@tsconfig/node20": "^20.1.2",
+    "@types/node": "20.8.10",
+    "rollup": "^4.0.2",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@elgato/streamdeck": "^0.3.0",
+    "@shared/lib": "workspace:*",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-swc3": "^0.11.2"
+  }
+}
