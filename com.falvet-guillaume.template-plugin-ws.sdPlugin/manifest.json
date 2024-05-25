@@ -28,12 +28,13 @@
       ],
       "States": [
         {
+          "Image": "imgs/actions/counter/key",
           "TitleAlignment": "middle"
         }
       ]
     }
   ],
-  "Category": "Sreamdeck Plugin Template",
+  "Category": "Streamdeck Plugin Template",
   "CategoryIcon": "imgs/plugin/category-icon",
   "CodePath": "bin/plugin.js",
   "PropertyInspectorPath": "bin/pi/index.html",
