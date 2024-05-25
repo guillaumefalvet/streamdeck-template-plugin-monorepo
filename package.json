@@ -24,6 +24,7 @@
     "@elgato/cli": "^0.3.0",
     "@types/ws": "^8.5.10",
     "rimraf": "^5.0.7",
+    "shared": "workspace:*",
     "ts-node": "^10.9.2"
   },
   "dependencies": {
@@ -31,9 +32,16 @@
     "express": "^4.19.2",
     "express-ws": "^5.0.2",
     "husky": "^9.0.11",
+    "lint-staged": "^15.2.5",
     "ws": "^8.17.0"
   },
   "engines": {
     "node": ">= 20"
+  },
+  "prettier": "shared/src/.prettierrc",
+  "lint-staged": {
+    "{shared,property-inspector,plugin}/**/*{.ts,.tsx}": [
+      "prettier --write"
+    ]
   }
 }
