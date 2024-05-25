@@ -9,11 +9,13 @@ on:
       - main
 
 jobs:
-  build-and-run:
+  package-plugin:
     runs-on: ubuntu-latest
-
+    env:
+      PLUGIN_VERSION:
     steps:
     - uses: actions/checkout@v3
+
     - name: Install Node.js
       uses: actions/setup-node@v3
       with:
@@ -22,7 +24,7 @@ jobs:
     - name: Extract version
       id: version
       working-directory: ./plugin
-      run: echo "PLUGIN_VERSION=$(jq .Version com.dim.streamdeck.sdPlugin/manifest.json -r)" >> $GITHUB_ENV
+      run: echo "PLUGIN_VERSION=$(jq .version package.json -r)" >> $GITHUB_ENV
 
     - uses: pnpm/action-setup@v2
       name: Install pnpm
