@@ -1,6 +1,6 @@
 {
-  "Name": "template-plugin-ws",
-  "Version": "1.0.0.0",
+  "Name": "Streamdeck Plugin Template",
+  "Version": "2.0.0.0",
   "Author": "Falvet Guillaume",
   "Actions": [
     {
@@ -17,9 +17,23 @@
           "TitleAlignment": "middle"
         }
       ]
+    },
+    {
+      "Name": "Light",
+      "UUID": "com.falvet-guillaume.template-plugin-ws.light",
+      "Icon": "imgs/actions/light/torch",
+      "Tooltip": "Turns a light on or off.",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "TitleAlignment": "middle"
+        }
+      ]
     }
   ],
-  "Category": "template-plugin-ws",
+  "Category": "Sreamdeck Plugin Template",
   "CategoryIcon": "imgs/plugin/category-icon",
   "CodePath": "bin/plugin.js",
   "PropertyInspectorPath": "bin/pi/index.html",
