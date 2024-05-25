@@ -17,7 +17,8 @@
     "version:sync": "bash sync_version_workspace.sh --sync",
     "version:major": "bash sync_version_workspace.sh --major",
     "version:minor": "bash sync_version_workspace.sh --minor",
-    "version:patch": "bash sync_version_workspace.sh --patch"
+    "version:patch": "bash sync_version_workspace.sh --patch",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@elgato/cli": "^0.3.0",
@@ -29,6 +30,7 @@
     "@elgato/streamdeck": "^0.3.0",
     "express": "^4.19.2",
     "express-ws": "^5.0.2",
+    "husky": "^9.0.11",
     "ws": "^8.17.0"
   },
   "engines": {
