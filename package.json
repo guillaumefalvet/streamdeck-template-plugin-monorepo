@@ -3,7 +3,7 @@
   "author": "Falvet Guillaume",
   "license": "MIT",
   "private": false,
-  "version": "1.0.0",
+  "version": "2.0.0",
   "scripts": {
     "clean": "rimraf com.falvet-guillaume.template-plugin-ws.sdPlugin/bin",
     "clean:package": "rimraf dist",
@@ -30,5 +30,8 @@
     "express": "^4.19.2",
     "express-ws": "^5.0.2",
     "ws": "^8.17.0"
+  },
+  "engines": {
+    "node": ">= 20"
   }
 }

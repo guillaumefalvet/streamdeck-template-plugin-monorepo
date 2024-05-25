@@ -3,7 +3,7 @@
   "author": "Falvet Guillaume",
   "license": "MIT",
   "private": false,
-  "version": "1.0.0",
+  "version": "2.0.0",
   "type": "module",
   "scripts": {
     "build": "rollup -c",
@@ -23,8 +23,14 @@
   },
   "dependencies": {
     "@elgato/streamdeck": "^0.3.0",
-    "@shared/lib": "workspace:*",
+    "shared": "workspace:*",
+    "i": "^0.3.7",
+    "npm": "^10.8.0",
     "rollup-plugin-copy": "^3.5.0",
-    "rollup-plugin-swc3": "^0.11.2"
+    "rollup-plugin-swc3": "^0.11.2",
+    "vite-plugin-minify": "^1.5.2"
+  },
+  "engines": {
+    "node": ">= 20"
   }
 }
