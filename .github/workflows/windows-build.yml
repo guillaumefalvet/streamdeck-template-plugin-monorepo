@@ -19,6 +19,11 @@ jobs:
       with:
         node-version: 20
 
+    - name: Extract version
+      id: version
+      working-directory: ./plugin
+      run: echo "PLUGIN_VERSION=$(jq .Version com.dim.streamdeck.sdPlugin/manifest.json -r)" >> $GITHUB_ENV
+
     - uses: pnpm/action-setup@v2
       name: Install pnpm
       id: pnpm-install
@@ -38,5 +43,5 @@ jobs:
     - name: Upload Release Folder
       uses: actions/upload-artifact@v3
       with:
-        name: release
+        name: release_${{ env.PLUGIN_VERSION }}
         path: dist
