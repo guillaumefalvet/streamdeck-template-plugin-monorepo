@@ -5,5 +5,8 @@
   "main": "src/index.ts",
   "devDependencies": {
     "@tsconfig/node20": "^20.1.2"
+  },
+  "dependencies": {
+    "prettier": "^3.2.5"
   }
 }
